@@ -9,7 +9,8 @@ export default TitleText;
 
 const styles = StyleSheet.create({
   textTitle: {
-    fontSize: 24,
-    color: 'blue',
+    fontSize: 26,
+    fontWeight: 'bold',
+    color: 'darkOliveGreen',
   },
 });

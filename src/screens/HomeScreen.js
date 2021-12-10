@@ -1,7 +1,6 @@
 import React from 'react';
 import {Button, ImageBackground, StyleSheet, View} from 'react-native';
 import TitleText from '../components/TitleText';
-import Container from '../components/Container';
 
 const bgImage2 = require('../assets/img/homeNavidenio.jpg');
 
@@ -20,32 +19,50 @@ export default function HomeScreen({navigation}) {
   };
 
   return (
-    <ImageBackground source={bgImage2} resizeMode='stretch' style={styles.image}>
+    <ImageBackground
+      source={bgImage2}
+      resizeMode="stretch"
+      style={styles.image}>
       <View style={styles.superior}>
-        <TitleText>Catalogo Navideño</TitleText>
+        <TitleText style={styles.title}>Catalogo Navideño</TitleText>
       </View>
       <View style={styles.inferior}>
-        <Button title="Pan Dulce Navideño" onPress={() => goToSecondScreen()} />
-        <Button title="Budines Navideños" onPress={() => goToThirdScreen()} />
-        <Button title="Dulces Navideños" onPress={() => goToFourthScreen()} />
+        <Button
+          title="Pan Dulce Navideño"
+          color="darkgreen"
+          onPress={() => goToSecondScreen()}
+        />
+        <Button
+          title="Budines Navideños"
+          color="darkgreen"
+          onPress={() => goToThirdScreen()}
+        />
+        <Button
+          title="Dulces Navideños"
+          color="darkgreen"
+          onPress={() => goToFourthScreen()}
+        />
       </View>
     </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
+  title: {
+    paddingBottom: 100,
+  },
   image: {
     flex: 1,
     width: '100%',
     height: '100%',
   },
   superior: {
-    flex: 1,
+    flex: 2,
     alignItems: 'center',
     justifyContent: 'center',
   },
   inferior: {
-    flex: 2,
+    flex: 5,
     justifyContent: 'center',
   },
 });
