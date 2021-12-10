@@ -1,6 +1,7 @@
 import React from 'react';
-import {Button, ImageBackground, StyleSheet, View, Text} from 'react-native';
+import {Button, ImageBackground, StyleSheet, View} from 'react-native';
 import TitleText from '../components/TitleText';
+import CustomButton from '../components/CustomButton';
 
 const bgImage2 = require('../assets/img/homeNavidenio.jpg');
 
@@ -24,21 +25,13 @@ export default function HomeScreen({navigation}) {
         <TitleText style={styles.title}>Catalogo Navideño</TitleText>
       </View>
       <View style={styles.inferior}>
-        <Button
-          title="Pan Dulce Navideño"
-          color="darkgreen"
-          onPress={() => goToSecondScreen()}
-        />
-        <Button
-          title="Budines Navideños"
-          color="darkgreen"
-          onPress={() => goToThirdScreen()}
-        />
-        <Button
+        <CustomButton title="Pan Dulce" onPress={() => goToSecondScreen()} />
+        <CustomButton title="Budines" onPress={() => goToThirdScreen()} />
+        <CustomButton
           title="Dulces Navideños"
-          color="darkgreen"
           onPress={() => goToFourthScreen()}
         />
+        <CustomButton onPress={() => goToSecondScreen} title="'A ver'" />
       </View>
     </ImageBackground>
   );
