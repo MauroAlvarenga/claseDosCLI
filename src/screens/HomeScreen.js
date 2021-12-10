@@ -19,10 +19,7 @@ export default function HomeScreen({navigation}) {
   };
 
   return (
-    <ImageBackground
-      source={bgImage2}
-      resizeMode="stretch"
-      style={styles.image}>
+    <ImageBackground source={bgImage2} resizeMode="stretch" style={{flex: 1}}>
       <View style={styles.superior}>
         <TitleText style={styles.title}>Catalogo Navideño</TitleText>
       </View>
@@ -48,14 +45,6 @@ export default function HomeScreen({navigation}) {
 }
 
 const styles = StyleSheet.create({
-  title: {
-    paddingBottom: 100,
-  },
-  image: {
-    flex: 1,
-    width: '100%',
-    height: '100%',
-  },
   superior: {
     flex: 2,
     alignItems: 'center',

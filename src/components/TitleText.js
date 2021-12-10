@@ -11,6 +11,6 @@ const styles = StyleSheet.create({
   textTitle: {
     fontSize: 26,
     fontWeight: 'bold',
-    color: 'darkOliveGreen',
+    color: 'darkgreen',
   },
 });
