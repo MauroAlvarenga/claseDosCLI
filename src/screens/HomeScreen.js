@@ -25,13 +25,14 @@ export default function HomeScreen({navigation}) {
         <TitleText style={styles.title}>Catalogo Navideño</TitleText>
       </View>
       <View style={styles.inferior}>
-        <CustomButton title="Pan Dulce" onPress={() => goToSecondScreen()} />
-        <CustomButton title="Budines" onPress={() => goToThirdScreen()} />
-        <CustomButton
-          title="Dulces Navideños"
-          onPress={() => goToFourthScreen()}
-        />
-        <CustomButton onPress={() => goToSecondScreen} title="'A ver'" />
+        <View style={styles.botonera}>
+          <CustomButton title="Pan Dulce" onPress={() => goToSecondScreen()} />
+          <CustomButton title="Budines" onPress={() => goToThirdScreen()} />
+          <CustomButton
+            title="Dulces Navideños"
+            onPress={() => goToFourthScreen()}
+          />
+        </View>
       </View>
     </ImageBackground>
   );
@@ -47,5 +48,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flex: 5,
     justifyContent: 'center',
+  },
+  botonera: {
+    marginTop: 40,
   },
 });

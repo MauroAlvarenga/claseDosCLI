@@ -1,6 +1,7 @@
 import React from 'react';
-import {Button, ImageBackground, StyleSheet, Text} from 'react-native';
+import {ImageBackground, StyleSheet, Text} from 'react-native';
 import Container from '../components/Container';
+import CustomButton from '../components/CustomButton';
 
 const bgImage = require('../assets/img/panDulceNavidenio.jpg');
 
@@ -16,7 +17,7 @@ export default function SecondScreen({navigation}) {
     <ImageBackground source={bgImage} resizeMode="stretch" style={{flex: 1}}>
       <Container>
         <Text style={styles.textTitle}>Segunda Pantalla</Text>
-        <Button
+        <CustomButton
           title="Volver al Inicio"
           onPress={() => goBack()}
           color="white"
@@ -30,6 +31,7 @@ const styles = StyleSheet.create({
   textTitle: {
     fontSize: 24,
     color: 'white',
+    marginBottom: 15,
   },
   container: {
     flex: 1,
