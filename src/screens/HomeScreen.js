@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, ImageBackground, StyleSheet, View} from 'react-native';
+import {Button, ImageBackground, StyleSheet, View, Text} from 'react-native';
 import TitleText from '../components/TitleText';
 
 const bgImage2 = require('../assets/img/homeNavidenio.jpg');
@@ -51,6 +51,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   inferior: {
+    alignItems: 'center',
     flex: 5,
     justifyContent: 'center',
   },

@@ -1,5 +1,8 @@
 import React from 'react';
-import {Button, StyleSheet, Text, View} from 'react-native';
+import {Button, StyleSheet, Text, ImageBackground} from 'react-native';
+import Container from '../components/Container';
+
+const bgImage = require('../assets/img/budinNavidenio.jpg');
 
 export default function ThirdScreen({navigation}) {
   const goBack = () => {
@@ -7,17 +10,23 @@ export default function ThirdScreen({navigation}) {
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.textTitle}>Third Screen</Text>
-      <Button title="Volver" onPress={() => goBack()} />
-    </View>
+    <ImageBackground source={bgImage} resizeMode="stretch" style={{flex: 1}}>
+      <Container>
+        <Text style={styles.textTitle}>Tercera Pantalla</Text>
+        <Button
+          title="Volver al Inicio"
+          onPress={() => goBack()}
+          color="white"
+        />
+      </Container>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
   textTitle: {
     fontSize: 24,
-    color: 'blue',
+    color: 'white',
   },
   container: {
     flex: 1,

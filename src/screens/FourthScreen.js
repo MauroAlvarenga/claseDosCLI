@@ -1,5 +1,8 @@
 import React from 'react';
-import {Button, StyleSheet, Text, View} from 'react-native';
+import {Button, StyleSheet, Text, ImageBackground} from 'react-native';
+import Container from '../components/Container';
+
+const bgImage = require('../assets/img/dulcesNavidenios.jpg');
 
 const FourthScreen = ({navigation}) => {
   const goBack = () => {
@@ -7,17 +10,23 @@ const FourthScreen = ({navigation}) => {
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.textTitle}>Fourth Screen</Text>
-      <Button title="Volver" onPress={() => goBack()} />
-    </View>
+    <ImageBackground source={bgImage} resizeMode="stretch" style={{flex: 1}}>
+      <Container>
+        <Text style={styles.textTitle}>Cuarta Pantalla</Text>
+        <Button
+          title="Volver al Inicio"
+          onPress={() => goBack()}
+          color="white"
+        />
+      </Container>
+    </ImageBackground>
   );
 };
 
 const styles = StyleSheet.create({
   textTitle: {
     fontSize: 24,
-    color: 'blue',
+    color: 'white',
   },
   container: {
     flex: 1,
